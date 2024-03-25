@@ -12,6 +12,7 @@ import {
   useList,
 } from '@/packages/swiper/effects/focus'
 import { SwiperRef } from '@/packages/swiper/types'
+import { useRtl } from '@/packages/configprovider'
 
 export interface FocusEffect {
   name: 'focus'
@@ -45,6 +46,7 @@ const defaultProps = {
 export const Swiper = React.forwardRef<SwiperRef, Partial<SwiperProps>>(
   (props, ref) => {
     const classPrefix = 'nut-swiper'
+    const rtl = useRtl()
     const {
       children,
       direction,
