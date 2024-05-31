@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Text } from '@tarojs/components'
 import { Cell, Dialog, Image } from '@nutui/nutui-react-taro'
 
 const Demo8 = () => {
@@ -26,7 +27,7 @@ const Demo8 = () => {
         onConfirm={() => setVisible(false)}
         onCancel={() => setVisible(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
     </>
   )

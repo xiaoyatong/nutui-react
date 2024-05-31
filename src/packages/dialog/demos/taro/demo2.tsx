@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Text } from '@tarojs/components'
 import { Cell, Dialog } from '@nutui/nutui-react-taro'
 
 const Demo2 = () => {
@@ -14,7 +15,7 @@ const Demo2 = () => {
         onConfirm={() => setVisible1(false)}
         onCancel={() => setVisible1(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
 
       <Cell title="提示弹框" onClick={() => setVisible2(true)} />
@@ -25,7 +26,7 @@ const Demo2 = () => {
         hideCancelButton
         onConfirm={() => setVisible2(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
 
       <Cell
@@ -38,7 +39,7 @@ const Demo2 = () => {
         onConfirm={() => setVisible3(false)}
         onCancel={() => setVisible3(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
     </>
   )

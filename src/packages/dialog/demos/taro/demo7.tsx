@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { View } from '@tarojs/components'
 import { Cell, Dialog } from '@nutui/nutui-react-taro'
 
 const Demo7 = () => {
@@ -19,10 +20,10 @@ const Demo7 = () => {
         onCancel={() => setVisible(false)}
       >
         <>
-          <div>
+          <View>
             文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容
-          </div>
-          <div
+          </View>
+          <View
             style={{
               height: '96px',
               borderRadius: '8px',
@@ -35,7 +36,7 @@ const Demo7 = () => {
             }}
           >
             自定义内容区域
-          </div>
+          </View>
         </>
       </Dialog>
     </>

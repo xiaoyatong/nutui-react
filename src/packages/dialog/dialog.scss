@@ -26,8 +26,8 @@
     -webkit-overflow-scrolling: touch;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    // -webkit-transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     border-radius: $dialog-border-radius;
     z-index: $dialog-z-index;
     animation-duration: 0.3s;
@@ -62,7 +62,7 @@
       top: initial;
       bottom: -56px;
       left: 50%;
-      transform: translate(-50%);
+      // transform: translate(-50%);
     }
 
     &:active {
@@ -140,8 +140,8 @@
   &-outer {
     left: auto;
     right: 50%;
-    -webkit-transform: translate(50%, -50%);
-    transform: translate(50%, -50%);
+    // -webkit-transform: translate(50%, -50%);
+    // transform: translate(50%, -50%);
   }
 
   &-close {

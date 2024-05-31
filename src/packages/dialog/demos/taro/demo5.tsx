@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Text } from '@tarojs/components'
 import { Cell, Dialog } from '@nutui/nutui-react-taro'
 
 const Demo5 = () => {
@@ -26,7 +27,7 @@ const Demo5 = () => {
           '--nutui-dialog-close-color': '#FFFFFF',
         }}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
     </>
   )

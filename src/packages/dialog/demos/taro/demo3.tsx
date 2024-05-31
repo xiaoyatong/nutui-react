@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Text } from '@tarojs/components'
 import { Cell, Dialog } from '@nutui/nutui-react-taro'
 
 const Demo3 = () => {
@@ -15,7 +16,7 @@ const Demo3 = () => {
         onConfirm={() => setVisible1(false)}
         onCancel={() => setVisible1(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
       <Cell
         title="底部 Footer 为 Button 时，点击遮罩不关闭"
@@ -30,7 +31,7 @@ const Demo3 = () => {
         onConfirm={() => setVisible2(false)}
         onCancel={() => setVisible2(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
       <Cell title="无底部 Footer 区域" onClick={() => setVisible3(true)} />
       <Dialog
@@ -41,7 +42,7 @@ const Demo3 = () => {
           setVisible3(false)
         }}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
     </>
   )

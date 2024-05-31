@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Text } from '@tarojs/components'
 import { Cell, Dialog } from '@nutui/nutui-react-taro'
 
 const Demo6 = () => {
@@ -24,7 +25,7 @@ const Demo6 = () => {
         onConfirm={() => setVisible1(false)}
         onCancel={() => setVisible1(false)}
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
       <Cell
         title="底部带关闭按钮"
@@ -40,7 +41,7 @@ const Demo6 = () => {
         onCancel={() => setVisible2(false)}
         closeIcon
       >
-        支持函数调用和组件调用两种方式。
+        <Text>支持函数调用和组件调用两种方式。</Text>
       </Dialog>
     </>
   )
