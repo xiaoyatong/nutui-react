@@ -3,8 +3,6 @@ import classNames from 'classnames'
 import { BasicComponent, ComponentDefaults } from '@/utils/typings'
 
 export interface HoverButtonItemProps extends BasicComponent {
-  className?: string
-  style?: React.CSSProperties
   icon?: React.ReactNode
   onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
@@ -24,9 +22,7 @@ export const HoverButtonItem = (props: Partial<HoverButtonItemProps>) => {
   }
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    if (onClick) {
-      onClick(event)
-    }
+    onClick && onClick(event)
   }
 
   return (

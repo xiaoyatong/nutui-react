@@ -1,89 +1,38 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Taro from '@tarojs/taro'
-import { ScrollView, View } from '@tarojs/components'
-// import '@nutui/icons-react-taro/dist/style_iconfont.css'
-import { Toast } from '@nutui/nutui-react-taro'
-import { useTranslate } from '@/sites/assets/locale/taro'
+import { Icon, ScrollView, Text, Image } from '@tarojs/components'
+import '@nutui/icons-react-taro/dist/style_iconfont.css'
+import { Add, Dongdong, UserAdd } from '@nutui/icons-react-taro'
+import { ArrowLeft, ArrowRight, DoubleLeft, DoubleRight } from './icon.taro'
+
 import Header from '@/sites/components/header'
-import Demo1 from './demos/taro/demo1'
-import Demo2 from './demos/taro/demo2'
-import Demo3 from './demos/taro/demo3'
-import Demo4 from './demos/taro/demo4'
-import Demo5 from './demos/taro/demo5'
-import Demo6 from './demos/taro/demo6'
-import Demo7 from './demos/taro/demo7'
 
 const IconDemo = () => {
-  const [translated] = useTranslate({
-    'zh-CN': {
-      '84aa6bce': '基础用法',
-      svg: 'SVG 按需使用',
-      dab8a74f: '图片链接',
-      '52c15454': '图标颜色',
-      '7aeb5407': '图标大小',
-      f2e6c6d6: '基础图标',
-    },
-    'zh-TW': {
-      '84aa6bce': '基礎用法',
-      svg: 'SVG 按需使用',
-      dab8a74f: '圖片連結',
-      '52c15454': '圖示顏色',
-      '7aeb5407': '圖示大小',
-      f2e6c6d6: '基礎圖示',
-    },
-    'en-US': {
-      '84aa6bce': 'Basic Usage',
-      svg: 'SVG import On Demand',
-      dab8a74f: 'Image Link',
-      '52c15454': 'IconFont Color',
-      '7aeb5407': 'IconFont Size',
-      f2e6c6d6: 'Base IconFont',
-    },
-  })
-
-  const [state, setState] = useState({
-    msg: '',
-    type: 'text',
-    cover: false,
-    visible: false,
-    duration: 2,
-    closeOnOverlayClick: false,
-    title: '',
-    bottom: '',
-    icon: '',
-    center: true,
-  })
+  const doubleRight =
+    'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij48cGF0aCBkPSJNNC4xNDcgMTMuOTc0YS43NzEuNzcxIDAgMCAxLS4xMi0xLjA4NUw3LjEzNiA5IDQuMDI4IDUuMTFhLjc3MS43NzEgMCAxIDEgMS4yMDQtLjk2M2wzLjQ5NyA0LjM3MWEuNzcxLjc3MSAwIDAgMSAwIC45NjRsLTMuNDk3IDQuMzcxYS43NzEuNzcxIDAgMCAxLTEuMDg0LjEyem01LjI0NSAwYS43NzEuNzcxIDAgMCAxLS4xMi0xLjA4NUwxMi4zODMgOSA5LjI3MiA1LjExYS43NzEuNzcxIDAgMSAxIDEuMjA1LS45NjNsMy40OTcgNC4zNzFhLjc3MS43NzEgMCAwIDEgMCAuOTY0bC0zLjQ5NyA0LjM3MWEuNzcxLjc3MSAwIDAgMS0xLjA4NS4xMnoiLz48L3N2Zz4='
 
   return (
     <>
       <Header />
       <ScrollView className={`demo ${Taro.getEnv() === 'WEB' ? 'web' : ''}`}>
-        <Toast
-          content={state.msg}
-          visible={state.visible}
-          type={state.type}
-          duration={state.duration}
-          icon={state.icon}
-          closeOnOverlayClick={state.closeOnOverlayClick}
-          onClose={() => {
-            setState({
-              ...state,
-              visible: false,
-            })
-          }}
-        />
-        <View className="h2">{translated.svg}</View>
-        <Demo1 />
-        <View className="h2">{translated['84aa6bce']}</View>
-        <Demo2 />
-        <View className="h2">{translated.dab8a74f}</View>
-        <Demo3 />
-        <View className="h2">{translated['52c15454']}</View>
-        <Demo4 />
-        <View className="h2">{translated['7aeb5407']}</View>
-        <Demo5 />
-        <Demo6 />
-        <Demo7 />
+        <Text>test</Text>
+        <ArrowLeft />
+        <Text>--test1--</Text>
+        <ArrowRight />
+        <Text>--test2--</Text>
+        <DoubleLeft />
+        <Text>--test3--</Text>
+        <DoubleRight />
+        <Icon type="info_circle" size={20} />
+        <Text>--test4--</Text>
+        <Image src={doubleRight} svg style={{ width: 20, height: 20 }} />
+        <Text>--test5--</Text>
+        <Add color="red" style={{ marginRight: '10px' }} />
+        <Text>--test6--</Text>
+        <UserAdd style={{ marginRight: '10px' }} />
+        <Text>--test7--</Text>
+        <Dongdong />
+        <Text>--test8--</Text>
       </ScrollView>
     </>
   )

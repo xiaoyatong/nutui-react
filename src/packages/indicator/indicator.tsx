@@ -11,9 +11,7 @@ const defaultProps = {
   current: 0,
   direction: 'horizontal',
 } as IndicatorProps
-
 const classPrefix = `nut-indicator`
-
 export const Indicator: FunctionComponent<
   Partial<IndicatorProps> & React.HTMLAttributes<HTMLDivElement>
 > = (props) => {
