@@ -4,7 +4,6 @@ var glob = require('glob')
 const path = require('path')
 const fs = require('fs-extra')
 let importStr = ``
-let importRNStr = ``
 let importMarkdownStr = ``
 let importScssStr = `\n`
 const packages = []
@@ -13,13 +12,11 @@ const raws = []
 
 config.nav.map((item) => {
   item.packages.forEach((element) => {
-    let { name, show, type, taro, exportEmpty, exclude, rn } = element
+    let { name, exclude } = element
     if (exclude) return
 
     importStr += `import ${name} from '@/packages/${name.toLowerCase()}/index.taro'\n`
     importStr += `export * from '@/packages/${name.toLowerCase()}/index.taro'\n`
-    importRNStr += `import ${name} from '@/packages/${name.toLowerCase()}/index.${rn?'rn':'taro'}'\n`
-    importRNStr += `export * from '@/packages/${name.toLowerCase()}/index.${rn?'rn':'taro'}'\n`
     importScssStr += `import '@/packages/${name.toLowerCase()}/${name.toLowerCase()}.scss'\n`
     packages.push(name)
 
@@ -67,31 +64,6 @@ fs.outputFile(
     if (error) throw error
   }
 )
-
-
-// let fileRNStrBuild = `${importRNStr}
-// export { ${packages.join(',')} };`
-//
-// fs.outputFile(
-//   path.resolve(__dirname, '../../src/packages/nutui.react.build.rn.ts'),
-//   fileRNStrBuild,
-//   'utf8',
-//   (error) => {
-//     if (error) throw error
-//   }
-// )
-
-// let fileRNStr = `${importRNStr}
-// ${importScssStr}
-// export { ${packages.join(',')} };`
-// fs.outputFile(
-//   path.resolve(__dirname, '../../src/packages/nutui.react.rn.ts'),
-//   fileRNStr,
-//   'utf8',
-//   (error) => {
-//     if (error) throw error
-//   }
-// )
 
 let taroScssfileStr = `
 ${importScssStr}

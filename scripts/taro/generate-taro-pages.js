@@ -5,12 +5,6 @@ const config = require('../../src/config.json')
 
 const navs = config.nav
 
-// let fileStr = `@import '../../../styles/font/iconfont.css';`
-// const projectID = process.env.VITE_APP_PROJECT_ID
-// if (projectID) {
-//   fileStr = `@import '../../../styles/font-${projectID}/iconfont.css';`
-// }
-
 // 在mobile-taro下创建相应的文件夹，并创建index.config.ts、index.tsx
 // 将packages下的demo.taro.tsx 的内容拷贝到 mobile-taro 下的 index.tsx 中。
 const createIndexConfig = (enName, package) => {
