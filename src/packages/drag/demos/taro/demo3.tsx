@@ -7,10 +7,9 @@ const Demo3 = () => {
       direction="x"
       attract
       style={{
-        top: '215px',
+        top: '275px',
         left: '0px',
       }}
-      className="drag-demo3"
     >
       <Button type="primary">attract</Button>
     </Drag>

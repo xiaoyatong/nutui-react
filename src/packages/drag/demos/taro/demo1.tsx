@@ -13,7 +13,7 @@ const Demo1 = () => {
   }
   return (
     <Drag
-      style={{ top: '60px', left: '24px' }}
+      style={{ top: '120px', left: '24px' }}
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
       onDrag={onDrag}
