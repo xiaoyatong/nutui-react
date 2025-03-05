@@ -7,7 +7,7 @@ const Demo2 = () => {
       <Drag
         direction="x"
         style={{
-          top: '200px',
+          top: '140px',
           left: '8px',
         }}
         className="drag-demo21"
@@ -17,7 +17,7 @@ const Demo2 = () => {
       <Drag
         direction="y"
         style={{
-          top: '200px',
+          top: '140px',
           right: '50px',
         }}
         className="drag-demo22"

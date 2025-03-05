@@ -7,7 +7,7 @@ const Demo3 = () => {
       direction="x"
       attract
       style={{
-        top: '275px',
+        top: '215px',
         left: '0px',
       }}
       className="drag-demo3"

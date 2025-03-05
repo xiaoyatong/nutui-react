@@ -1,5 +1,6 @@
 import React from 'react'
 import { Drag, Button } from '@nutui/nutui-react-taro'
+import { View } from '@tarojs/components'
 import { getWindowInfo } from '@/utils/get-system-info'
 
 const Demo4 = () => {
@@ -11,15 +12,15 @@ const Demo4 = () => {
     return screenWidth - 300 - 9
   }
   const bottom = () => {
-    return windowHeight - 501 - 57
+    return windowHeight - 501
   }
   return (
-    <>
+    <View style={{ height: 300 }}>
       <div
         className="drag-boundary"
         style={{
           position: 'absolute',
-          top: '360px',
+          top: '300px',
           left: '8px',
           width: '300px',
           height: '200px',
@@ -28,12 +29,12 @@ const Demo4 = () => {
       />
       <Drag
         className="drag-demo4"
-        boundary={{ top: 361, left: 9, bottom: bottom(), right: right() }}
+        boundary={{ top: 301, left: 9, bottom: bottom(), right: right() }}
         style={{ top: '400px', left: '50px' }}
       >
         <Button type="primary">boundary</Button>
       </Drag>
-    </>
+    </View>
   )
 }
 export default Demo4
